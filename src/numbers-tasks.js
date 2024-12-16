@@ -638,12 +638,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  const maxSafeValue = Math.sqrt(Number.MAX_VALUE);
-  if (a > maxSafeValue || b > maxSafeValue) {
-    return Infinity;
-  }
-  const res = Math.sqrt(a ** 2 + b ** 2);
-  return res;
+  return Math.hypot(a, b);
 }
 
 /**
